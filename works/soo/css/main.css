@@ -1,0 +1,665 @@
+@import url(common.css);
+
+.visual {  
+  width: 100%;
+  height: 800px;
+  background: url(../img/bg.png) no-repeat center center / cover;
+}
+.visual .visual-con {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin: auto
+}
+.visual .text {
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  font-size: 80px
+}
+.slog {
+  height: 120px;
+  line-height: 120px;
+  background: #f49600;
+  color: #fff;
+  text-align: center
+}
+.slog p {
+  font-size: 24px
+}
+
+/*main*/
+main {
+  width: 100%
+}
+main h2 {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;  
+  margin: 80px 0 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase
+}
+main h3, 
+main p {
+  letter-spacing: 1px;
+  transition: all .3s;
+}
+.news {
+  width: 1200px;
+  margin: auto
+}
+.news .banner {
+  display: none;
+}
+.news .list li {
+  display: block;
+  float: left;
+  width: 40%;
+  margin: 0 5%;
+  margin-bottom: 50px;
+  height: 600px;
+  transition: all .3s;
+  overflow: hidden
+}
+.news .list a {
+  display: block;
+  height: 317px;
+  overflow: hidden
+}
+.news .list a img {
+  display: block;
+  width: 100%;
+  transition: all .3s ease-in
+}
+.news .list li:hover {
+  box-shadow: 0 0 15px #ddd
+}
+.news .list li:hover h3 {
+  color: #ec9b3b
+}
+.news .list li:hover img {
+  transform: scale(1.1)
+}
+.news .text-box {
+  padding: 15px
+}
+.news h3 {
+  font-size: 30px;
+  margin: 5px 0 20px;
+  line-height: 1.3
+}
+.news .date {
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-transform: uppercase
+}
+.news .date:before,
+.news .date span:before {
+  display: block;
+  float: left;
+  content: '';
+  left: 0;
+  bottom: .5em;
+  height: 1px;
+  margin-top: 8px;
+  margin-right: 20px;
+  width: 60px;
+  background-color: #4A4A4A
+}
+.news .date span {
+  display: inline-block;
+  margin: 0 20px;
+  text-align: right
+}
+.news .desc {
+  line-height: 1.8
+}
+.btn {
+  position: relative;
+  display: block;
+  width: 180px;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 30px;
+  
+  color: #fff;
+  background: #f49600;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  
+  overflow: hidden
+}
+.btn .txt {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.btn .bg {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  
+  width: 100%;
+  height: 100%;
+  background: #4A4A4A;
+  transition: all 0.3s
+}
+.ver1,
+.spt .list .ver2 {
+  opacity: .9
+}
+.btn:hover .bg,
+.spt .list:hover .bg {
+  top: 0
+}
+/*     jQuery     */
+header {
+  transition: all .15s
+}
+header.on {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  height: 60px;
+  background: #f2f4f5;
+  opacity: .93;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1)
+}
+/*
+header.on .header-con {
+  line-height: 60px;
+  color: black
+}
+header.on .logo {
+  float: right;
+  width: 75px;
+  height: 60px
+}
+header .logo a {
+  transition: all .15s
+}
+header.on .logo a {
+  margin-top: 0;
+  background: url(../img/logo_02.png) no-repeat 0 0 / contain
+}
+header.on .gnb a {
+  font-size: 16px;
+  color: #555;
+  text-shadow: none
+}
+header.on .gnb a:hover {
+  color: #111;
+  font-weight: bold
+}
+header.on .gnb a:before {
+  height: 3px;
+  background: #f49600
+}
+*/
+
+.do {
+  position: relative;
+  height: 780px;
+  background: url(../img/doit_bg.png) no-repeat fixed center center / cover;
+  color: #eee 
+}
+.do h2 {
+  padding: 120px 0 0;
+}
+.do ul {
+  width: 1200px;
+  margin: auto
+}
+.do .list {
+  display: block;
+  float: left;
+  width: 15%;
+  margin: 5%
+}
+.do .list img {
+  display: block;
+  width: 80%;
+  margin-left: 10%
+}
+.do .list .desc {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 18px
+}
+.do .button {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  margin-left: -600px;
+  bottom: 100px;
+}
+.spt {
+  width: 1200px;
+  margin: auto;
+  height: 750px;
+}
+.spt .list {
+  position: relative;
+  display: block;
+  float: left;
+  width: 350px;
+  height: 100%;
+  margin: 25px
+}
+.spt img {
+/*  position: absolute;*/
+  display: block;
+  filter: brightness(.9);
+  transition: all .3s
+}
+.ver2 {
+  width: 350px
+}
+.spt p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-transform: uppercase; 
+  transition: all .3s
+}
+.spt .list:hover img {
+  filter: brightness(1)
+}
+/*
+footer {
+  width: 100%;
+  height: 150px;
+  background: #253b43;
+  color: #fff
+}
+*/
+/*
+.footer-con {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+  height: 80px;
+  padding-top: 35px
+}
+.footer-con .f-logo {
+  float: left
+}
+.footer-con .sns {
+  position: absolute;
+  right: 0px;
+  bottom: 35px
+}
+.footer-con .sns a {
+  font-size: 25px;
+  padding-right: 15px;
+  transition: all .3s
+}
+.footer-con .sns a:hover {
+  color: #f49600
+}
+.footer-con address {
+  bottom: 0;
+  position: absolute;
+  margin-left: 130px;
+  font-style: normal;
+  font-size: 13px
+}
+.footer-con .right-fnb {
+  position: absolute;
+  width: 400px;
+  display: block;
+  right: 0;
+  bottom: 0;
+  font-size: 13px;
+  text-align: right
+}
+
+.footer-con .right-fnb a {
+  width: 90%;
+  padding: 0 15px;
+  border-right: solid 1px;
+  transition: all .3s
+}
+.footer-con .right-fnb a:last-child {
+  border: none
+}
+.footer-con .right-fnb a:hover {
+  color: #999
+}
+*/
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+/*
+  header .header-con {
+    width: 100%
+  }
+  header .logo {
+    position: absolute;
+    top: 18%;
+    right: 2%;
+    width: 10%
+  }
+  header .gnb {
+    width: 90%;
+    left: 2%
+  }
+  header .gnb a {
+    padding: 0 15px;
+    font-size: .99em
+  }
+  header.on .logo {
+  top: -1%;
+  width: 10%
+  }
+*/
+  .visual {
+    height: 600px;
+    background: url(../img/bg.png) no-repeat center center / cover
+  }
+  .visual .visual-con {
+    width: 100%
+  }
+  .visual .text {
+  bottom: 10%;
+  left: 2%;
+  font-size: 55px
+  }
+  .slog {
+    height: 90px;
+    line-height: 90px;
+    font-size: 20px
+  }
+  main h2 {
+  font-size: 40px;
+  margin: 70px 0 40px
+  }
+  .news {
+  width: 100%
+  }
+  .news .list li {
+  width: 45%;
+  margin: 0 2.5%;
+  margin-bottom: 50px;
+  height: 600px
+  }
+  .news .list a {
+  height: auto;
+  }
+  .news .date {
+    display: none;
+  }
+  .do ul {
+    width: 100%
+  }
+  .spt {
+    width: 100%;
+    height: auto;
+    margin-bottom: 120px
+  }
+  .spt .list {
+  width: 30%;
+  margin: 1.666%
+  }
+  .spt img {
+    width: 100%
+  }
+  .ver2 {
+    width: 100%
+  }
+/*
+  .footer-con {
+    width: 100%
+  }
+  .footer-con .f-logo {
+    position: absolute;
+    left: 2%
+  }
+  .footer-con .right-fnb {
+    display: none;
+  }
+  .footer-con address {
+    right: 15px    
+  }
+*/
+}
+@media screen and (max-width: 639px){
+/*
+  header {
+    height: 100px;
+    margin-top: 0;
+  }
+  header.on {
+    height: 60px
+  }
+  header .header-con {
+    width: 100%
+  }
+  header .logo {
+    position: absolute;
+    top: 10px;
+    width: 10%;
+    margin-left: 45%
+  }
+  header.on .logo {
+    display: none;
+  }
+  header .gnb {
+    width: 90%;
+    margin-left: 5%;
+    top: 35px
+  }
+  header.on .gnb {
+    top: 0px
+  }
+  header .gnb a {
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    font-size: .99em
+  }
+  header .gnb a:before {
+    opacity: 0
+  }
+  header.on .gnb a:before {
+    opacity: 1
+  }
+*/
+  .visual {
+    height: 600px
+  }
+  .visual .visual-con {
+    width: 100%
+  }
+  .visual .text {
+  bottom: 8%;
+  left: 5%;
+  font-size: 55px
+  }
+  .slog {
+    height: 90px;
+    line-height: 90px;
+  }
+  .slog p {
+    font-size: 20px
+  }
+   main h2 {
+  font-size: 40px;
+  margin: 70px 0 40px
+  }
+  .news {
+  width: 100%
+  }
+  .news .list {
+    display: none;
+  }
+  .news .list li {
+  width: 90%;
+  margin: 0 5%;
+  margin-bottom: 50px;
+  height: 410px
+  }
+  .news .list a {
+  height: auto;
+  }
+  .news .text-box {
+  padding: 7px
+  }
+  .news h3 {
+  font-size: 28px;
+  line-height: 1.2
+}
+  .news .date,
+  .news .desc {
+    display: none
+  }
+  .news .btn {
+    margin-top: 60px;
+    margin-bottom: 100px
+  }
+  .news .cover .banner {
+    display: block
+  }
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden
+  }
+  .cover .banner {
+    position: absolute;
+    width: 100%;
+    height: 100%
+  }
+  .cover .banner li {
+    position: absolute;
+    
+  }
+  .cover .ind {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 30px
+  }
+  .cover .ind a {
+    display: inline-block;
+    width: 60px;
+    height: 30px
+  }
+  .cover .ind a:before {
+    display: block;
+    content: '\f111';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome';
+    font-size: 20px;
+    color: #f49600;
+    opacity: .7
+  }
+  .cover .ind a.on {
+    cursor: default
+  }
+  .cover .ind a.on:before {
+    content: '\f192';
+    color: #f49600;
+    opacity: 1
+  }
+  .cover .sm-btn {
+    display: none
+  }
+  .cover .sm-btn a {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%
+  }
+  .cover .sm-btn .prev {
+    margin-left: -49% /*960/2*/
+  }
+  .cover .sm-btn .next {
+    margin-left: 40%; /*480-70*/
+  }
+  .cover .sm-btn a:before {
+    font-family: 'FontAwesome', 'Font Awesome 5 Free';
+    font-size: 40px;
+    content: '\f359';
+    color: #fff;
+    text-shadow: 1px 1px 5px #333
+  }
+  .cover .sm-btn a:hover:before {
+    color: rgb(244, 150, 0);
+    text-shadow: 1px 1px 2px #777
+  }
+  .cover .sm-btn .next:before {
+    content: '\f35a'
+  }
+  .cover .sm-btn a.on {
+    display: none;
+  }
+  .do {
+  background: url(../img/doit_bg.png) no-repeat center center / cover;
+}
+  .do ul {
+    width: 100%
+  }
+  .do .list {
+    display: block;
+    width: 40%;
+  }
+  .do .list img {
+  width: 50%;
+  margin-left: 25%
+  }
+  .do .list .desc {
+  margin-top: 30px;
+  font-size: 14px
+  }
+  .spt {
+    width: 100%;
+    height: auto
+  }
+  .spt .list {
+  width: 90%;
+  margin: 0 5% 110px
+  }
+  .spt img {
+    width: 100%
+  }
+  .ver2 {
+    width: 100%
+  }
+/*
+  .footer-con {
+    width: 100%;
+    margin-top: 50px
+  }
+  .footer-con .f-logo {
+    position: absolute;
+    left: 5%;
+    bottom: -5px
+  }
+  .footer-con .f-logo img {
+    width: 70%
+  }
+  .footer-con .right-fnb {
+    display: none;
+  }
+  .footer-con address {
+    right: 4%;
+    text-align: right
+  }
+  .footer-con .sns {
+    width: 220px
+  }
+  .footer-con .sns a {
+    padding-left: 5%;
+  }
+*/
+}

@@ -1,0 +1,891 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=ABeeZee|Lato:900|Nanum+Gothic);
+@import url(all.min.css);
+@import url(normalize.css);
+
+/*font*/
+body {
+  font-family: 'ABeeZee', sans-serif;
+  background: #fbfbff;
+  color: #222
+}
+.num {
+  font-family: 'Lato', sans-serif
+}
+.ko {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+}
+::selection {
+  background: #191970;
+  color: #eee;
+}
+::-webkit-scrollbar {
+  width: 10px
+}
+::-webkit-scrollbar-track {
+  background: #eee
+}
+::-webkit-scrollbar-thumb {
+  background: #191970
+}
+/*layout*/
+header {
+  width: 100%;
+  position: absolute;
+  padding-top: 30px;
+  height: 80px;
+  line-height: 80px;
+} /*Due to jQuery fixedHeader, had to put all orders here in header*/
+
+header .header-con {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+}
+header .lang {
+  position: relative;
+  float: left;
+  bottom: 55px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+header .lang a {
+  padding: 0 6px;    
+  font-weight: normal;
+  transition: all .3s
+}
+header .lang a:hover,
+header .lang a.on {
+    background-color: #191970;
+    color: #eee
+}
+header .comm {
+  position: absolute;
+  left: 0px;
+  font-size: 20px
+}
+header .comm a {
+  position: relative
+}
+header .logo {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1
+}
+header .logo a {
+  font-size: 24px;
+  letter-spacing: 1.3px
+}
+header .gnb {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  padding-top: 2.5px;
+}
+header .gnb a {
+  position: relative;
+  margin-left: 20px
+}
+header .comm a:after,
+header .gnb a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -2px;
+  width: 0;
+  bottom: 10px;
+  border-bottom: solid 2px #191970;
+  transition: all .2s
+}
+header .comm a:hover:after,
+header .gnb a:hover:after {
+  width: 100%
+}
+/*header jQuery*/
+header {
+  transition: all .3s;
+  z-index: 1
+}
+header.on {
+  position: fixed;
+  width: 100%;
+  background: rgba(251, 251, 255, 0.9);
+  border-bottom: solid 1px;
+  z-index: 1;
+  padding-top: 0;
+  height: 60px;
+  line-height: 60px
+}
+/*aside*/
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2
+}
+.left-aside {
+  z-index: 0
+}
+.about-con,
+.comm-con {
+  width: 100%;
+  height: 100%
+}
+section {
+  float: left;
+  height: 100%;
+  background: #f0f0f0
+}
+.blur {
+  width: 55%;
+  background: rgba(255, 255, 255, 0.8)
+}
+.comm-blur {
+  width: 30%
+}
+.about,
+.comment {
+  width: 45%;
+  position: relative;
+  box-shadow: -5px 10px 30px rgba(196, 194, 194, 0.78);
+}
+.comment {
+  width: 70%
+}
+.about .close-btn,
+.comment .close-btn {
+  display: block;
+  position: absolute;
+  padding-bottom: 50px;
+  width: 30px;
+  height: 30px;
+  top: 1%;
+  right: 7%;
+  background: transparent
+}
+.comment .close-btn {
+  left: 6.5%
+}
+.about .close-btn:hover,
+.comment .close-btn:hover {
+  cursor: pointer
+}
+.about .close-btn:before,
+.about .close-btn:after,
+.comment .close-btn:before,
+.comment .close-btn:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #191970;
+  border-bottom: solid 2px
+}
+.about .close-btn:before,
+.comment .close-btn:before {
+  transform: translateX(-7px) rotate(45deg);
+  right: -25px
+}
+.about .close-btn:after,
+.comment .close-btn:after {
+  transform: translateX(7px) rotate(-45deg);
+  left: -25px
+}
+.comment ul {
+  position: absolute;
+  width: 91%;
+  top: 12%;
+  margin: 0 4.5%
+}
+.comment .list {
+  float: left;
+  display: block;
+  width: 45%;
+  height: 135px;
+  margin: 0 2.5% 3%;
+/*  background: green*/
+}
+.comment .list h3 {
+  font-size: 45px;
+  color: #191970
+}
+.comment .list .drawing {
+  position: relative;
+  display: block;
+  float: left;
+  width: 30%;
+  height: 80%;
+  margin: 0 10px 10px 0;
+  border: solid 3px #191970;
+  box-shadow: -3px 2px
+8px rgba(153, 153, 153, 0.8)}
+.comment .list .drawing span {
+  position: absolute;
+  bottom: -28px;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+}
+.comment .list .lhy {
+  background: url(../img/comm01.png) no-repeat center bottom / contain
+}
+.comment .list .hsw {
+  background: url(../img/comm02.png) no-repeat center bottom / contain
+}
+.comment .list .kjh {
+  background: url(../img/comm03.png) no-repeat center bottom / contain
+}
+.comment .list .ymy {
+  background: url(../img/comm04.png) no-repeat center bottom / contain
+}
+.comment .list .t {
+  background: url(../img/comm05.png) no-repeat center bottom / contain
+}
+.comment .list .khj {
+  background: url(../img/comm06.png) no-repeat center bottom / contain
+}
+.comment .list .mgh {
+  background: url(../img/comm07.png) no-repeat center bottom / contain
+}
+.comment .list span {
+  display: block;
+  font-size: 14px;
+  text-align:justify;
+  line-height: 1.5;
+}
+.comment .list span b {
+  display: inline-block;
+  margin: 5px 0;
+}
+.about .top {
+  height: 500px;
+  background: green
+}
+.about p {
+  background: url(../img/dk02.png) no-repeat center / cover;
+  position: absolute;
+  display: block;
+  width: 37%;
+  height: auto;
+  border: solid 5px #191970;
+  box-shadow: -10px 8px 8px rgba(153, 153, 153, 0.59);
+  overflow: hidden;
+  left: 7%;
+  top: 15%;
+}
+.about p img {
+  display: block;
+  width: 100%;
+  transition: all .3s
+}
+.about p:hover img {
+  opacity: 0
+}
+.about .about-desc {
+  position: absolute;
+  top: 15%;
+  width: 43%;
+  right: 7%;
+  font-size: 20px;
+  line-height: 1.4
+}
+.about .about-desc h3 {
+  font-size: 20px;
+  font-weight: normal
+}
+.about .about-desc span {
+  display: block;
+  margin: 20px 0;
+}
+.about ul {
+  position: absolute;
+  bottom: 7%;
+  left: 7%
+}
+.about ul li {
+  padding-bottom: 5px;
+  margin-top: 20px;
+  border-bottom: solid 1.5px #191970;
+}
+.about ul li:first-child {
+  width: 100%;
+}
+.about ul li:last-child {
+  width: 82%;
+}
+.about address {
+  opacity: 0;
+  position: absolute;
+  display: block;
+  bottom: 2%;
+  left: 7%;
+  font-style: normal;
+  font-size: 13px
+}
+.about .bg-txt {
+  position: absolute;
+  display: block;
+  width: 340px;
+  bottom: 7%;
+  right: 7%;
+  color: #191970;
+  text-align: right;
+  font-size: 65px;
+  line-height: 1
+}
+.about .bg-txt b {
+  display: block;
+  background: #191970;
+  color: #eee;
+  margin-top: 10px;
+  padding: 0 10px
+}
+/*aside jQuery*/
+aside {
+  transform: translateX(100%);
+  transform-origin: right center;
+  opacity: 0;
+  transition: all .7s
+}
+.left-aside {
+  transform: translateX(-100%);
+  transform-origin: left center;
+  opacity: 0
+}
+aside.on {
+  transform: translateX(0%);
+  opacity: 1
+}
+.left-aside.on {
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: 2
+}
+/*main*/
+main {
+  padding-top: 170px
+}
+main h2 {
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 100px;
+  color: #191970;
+  font-weight: normal
+}
+main ul {
+  width: 1200px;
+  margin: auto
+}
+.list {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 100px
+}
+.list a {
+  display: block;
+  width: 67%;
+  height: 100%;
+  overflow: hidden
+}
+.list .even {
+  float: right
+}
+.list a .pic {
+  position: relative;
+  display: block;
+  height: 100%;
+  transition: all .3s ease-in
+}
+.list a .first {
+  background: url(../img/pf01.png) no-repeat center
+}
+.list a .second {
+  background: url(../img/pf02.png) no-repeat center bottom;
+}
+.list a .third {
+  background: url(../img/pf03.png) no-repeat right top / cover;
+}
+.list a .fourth {
+  background: url(../img/pf04.png) no-repeat right bottom / cover;
+}
+.list a .fifth {
+  background: url(../img/pf05.png) no-repeat 0 / cover;
+}
+.list a .sixth {
+  background: url(../img/pf06.png) no-repeat center / cover
+}
+.list a .seventh {
+  background: url(../img/pf07.png) no-repeat left / cover
+}
+.list:hover a .pic {
+  transform: scale(1.02)
+}
+.list a .pic .pf-intro {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all .5s
+}
+.list:hover a .pic .pf-intro {
+  background: rgba(154, 153, 160, 0.91)
+}
+.list a .pic .pf-intro .num-odd,
+.list a .pic .pf-intro .num-even {
+  position: absolute;
+  transition: all .5s;
+  opacity: 0;
+  bottom: 0;
+  color: rgb(25, 25, 112);
+  font-size: 14rem;
+  font-weight: bold;
+  transform: translateY(50%)
+}
+.list a .pic .pf-intro .num-odd {
+  left: 0px;
+}
+.list a .pic .pf-intro .num-even {
+  right: -5px
+}
+.list a .pic .pf-intro .num-odd:after,
+.list a .pic .pf-intro .num-even:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  bottom: 1px;
+  top: 0px;
+  border-bottom: solid 25px
+}
+.list:hover a .pic .pf-intro .num-odd,
+.list:hover a .pic .pf-intro .num-even {
+  opacity: 1;
+  transform: translateY(0%)
+}
+.list .pf-info {
+  position: absolute;
+  height: 300px;
+  margin-top: -160px;
+  top: 50%;
+  right: 0;
+  width: 28%
+}
+.list .even2 {
+  left: 0
+}
+.pf-info .sm-title {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  color: #111;
+  line-height: 1.5
+}
+.pf-info .sm-title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 50%;
+  border-bottom: solid 1px #191970
+}
+.pf-info .ko {
+  margin-top: 80px;
+  text-align: justify
+}
+.pf-info .ko i {
+  display: block;
+  padding: 15px 0;
+}
+.list .visit {
+  position: absolute;
+  height: 30px;
+  line-height: 30px;
+  width: 90px;
+  left: 0;
+  bottom: 0px;
+
+  font-weight: bold;
+  font-size: 14px;
+  color: #111;
+  opacity: 0;
+  transition: all .5s
+}
+.list:hover .visit {
+  opacity: 1
+}
+.list .visit:before {
+  content: '';
+  display: block;
+  position: relative;
+  left: 0;
+  width: 0;
+  bottom: -25px;
+  border-bottom: solid 2px #191970;
+  transition: all .2s
+}
+  .list:hover .visit:before {
+  width: 100%
+}
+  main .top-btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+
+  font-size: 14px;
+  color: #191970;
+  background: rgba(240, 240, 240, 0.76);
+  border: solid 2.5px;
+  cursor: pointer;
+  transition: all .5s
+}
+main .top-btn:hover {
+  background: #191970;
+  border: solid 2.5px #191970;
+  color: #eee
+}
+main .top-btn {
+  display: none;
+  transform: all .5s
+}
+footer {
+  margin: 70px 0 50px;
+  text-align: center;
+}
+footer address {
+  font-style: normal;
+  font-size: 12px
+}
+
+@media screen and (min-width: 640px) and (max-width: 1199px) {
+  header .header-con {
+    width: 100%;
+  }
+  header .lang {
+    margin: 0 16px;
+  }
+  header .comm {
+    left: 16px
+  }
+  header .gnb {
+    right: 16px
+  }
+  header .logo {
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+  }
+  .blur {
+    width: 30%
+  }
+  .about {
+    width: 70%
+  }
+  .comm-blur {
+    width: 0%
+  }
+  .comment {
+    width: 100%;
+    box-shadow: none
+  }
+  .comm-con {
+    position: absolute;
+    overflow-y: scroll;
+    background: #f0f0f0
+  }
+  .about .close-btn,
+  .about .about-desc {
+    right: 5%
+  }
+  .about .close-btn,
+  .comment .close-btn {
+    top: -5px
+  }
+  .comment .close-btn {
+    left: 4.5%
+  }
+  .comment ul {
+  width: 95%;
+  top: 11%;
+  margin: 0 2.5%
+  }
+  .comment .list {
+  width: 46%;
+  height: 135px;
+  margin: 0 2% 3%;
+  }
+  .comment .list .drawing {
+    height: 74%;
+  }
+  .comment .list .drawing span {
+    font-size: 10px
+  }
+  .comment .list span {
+    font-size: 12px
+  }
+  .comment .title {
+    padding-bottom: 20px
+  }
+  .comment .teacher {
+    padding-top: 20px;
+  }
+  .about ul {
+    left: 7%
+  }
+  .about .bg-txt {
+    font-size: 50px;
+    width: 235px
+  }
+  main {
+    margin: 0 16px
+  }
+  main h2 {
+    width: 100%
+  }
+  main ul {
+    width: 100%;
+  }
+  .list a {
+    width: 60%
+  }
+  .list .pf-info {
+    width: 37%;
+    height: 330px
+  }
+  .list .visit {
+    opacity: 1;
+    width: 120px
+  }
+  .list .visit:before {
+    width: 100%
+  }
+  .list:hover .visit {
+    color: #aea9ba;
+  }
+  .list a .pic .pf-intro {
+  background: rgba(154, 153, 160, 0.91);
+  }
+  .list:hover a .pic .pf-intro {
+  background: rgba(154, 153, 160, 0.26);
+  }
+  .list a .pic .pf-intro .num-odd,
+  .list a .pic .pf-intro .num-even {
+    color: rgb(25, 25, 112);
+    opacity: 1;
+    transform: translateY(0%)
+  }
+  main .top-btn {
+  right: 16px;
+  bottom: 16px
+  }
+  footer {
+    margin: 50px 0 16px;
+  }
+}
+@media screen and (max-width: 639px) {
+  header {
+    padding-top: 20px;
+    height: 60px;
+    line-height: 60px;
+  }
+  header .header-con {
+    width: 100%;
+  }
+  header .lang {
+    bottom: 37px;
+    margin: 0 16px;
+    font-size: 10px;
+  }
+  header .comm {
+    left: 16px
+  }
+  header .comm a {
+    font-size: 15px
+  }
+  header .gnb {
+    right: 16px;
+    padding-top: 2.5px;
+    font-size: 15px
+  }
+  header .gnb .work {
+    display: none;
+  }
+  header .logo {
+    top: -2px
+  }
+  header .logo a {
+    font-size: 18px;
+  }
+  header .comm a:after,
+  header .gnb a:after {
+    bottom: 7px;
+    border-bottom: solid 1.5px #191970;
+  }
+  .comm-con {
+    position: absolute;
+    overflow-y: scroll;
+    background: #f0f0f0
+  }
+  .blur {
+    width: 0%
+  }
+  .about {
+    width: 100%
+  }
+  .comm-blur {
+    width: 0%
+  }
+  .comment {
+    width: 100%;
+    box-shadow: none
+  }
+  .comment .close-btn {
+    left: 4%;
+  }
+  .comment ul {
+    top: 10%;
+    left: -10px
+  }
+  .comment .list {
+    float: none;
+    width: 100%;
+    height: 135px;
+    margin: 0 2.5% 5%
+  }
+  .comment .list .even {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px
+  }
+  .comment .list span {
+    font-size: 13px;
+  }
+  .comment .list .hgt {
+    padding-top: 20px
+  }
+  .comment .list .drawing span {
+    font-size: 10px
+  }
+  .comment .list .even-desc {
+    text-align: right;
+  }
+  .comment .title:nth-child(1) {
+    margin-bottom: 30px
+  }
+  .about .bg-txt {
+    width: 230px;
+    font-size: 45px
+  }
+  .about .bg-txt b {
+    padding: 5px
+  }
+  .about ul {
+    bottom: 7%;
+    left: 7%;
+    font-size: 13px;
+    z-index: 3
+  }
+  .about .close-btn,
+  .comment .close-btn {
+    position: fixed;
+    top: -7px;
+    z-index: 3
+  }
+  .about .about-desc,
+  .about .about-desc h3{
+    font-size: 13px
+  }
+  main {
+    padding: 130px 0 0;
+    margin: 0 16px
+  }
+  main h2 {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding-top: 10px;
+  }
+  main ul {
+    width: 100%;
+  }
+  .list {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 10px
+  }
+  .list a {
+  width: 100%;
+  height: 300px
+  }
+  .list a .first {
+  background: url(../img/pf01.png) no-repeat center / cover
+  }
+  .list a .second {
+  background: url(../img/pf02.png) no-repeat center / cover ;
+  }
+  .list a .pic .pf-intro {
+  background: rgba(163, 162, 173, 0.49);
+  }
+  .list:hover a .pic {
+  transform: scale(1)
+  }
+  .list:hover a .pic .pf-intro {
+    background: rgba(154, 153, 160, 0.26);
+    transform: scale(1)
+  }
+  .list a .pic .pf-intro .num-odd,
+  .list a .pic .pf-intro .num-even {
+    bottom: -2px;
+    opacity: 1;
+    font-size: 8rem;
+    transform: translateY(0%)
+  }
+  .list a .pic .pf-intro .num-odd {
+    text-align: right;
+    right: 0px;
+  }
+  .list a .pic .pf-intro .num-odd:after {
+    right: 0;
+    width: 9.5rem
+  }
+  .list a .pic .pf-intro .num-odd:after,
+  .list a .pic .pf-intro .num-even:after {
+    border-bottom: solid 16px
+  }
+  .list .pf-info {
+    height: 250px;
+    margin-top: 10px;
+    width: 100%
+  }
+  .pf-info .sm-title:before {
+    bottom: -20px
+  }
+  .pf-info .ko {
+    margin-top: 40px
+  }
+  .list .visit {
+    width: 110px;
+    opacity: 1
+  }
+  .list .visit:before {
+    width: 100%
+  }
+  .list:hover .visit {
+    color: #aea9ba
+  }
+  main .top-btn {
+  right: 16px;
+  bottom: 16px
+  }
+  footer {
+    margin: 50px 0 16px;
+  }
+}

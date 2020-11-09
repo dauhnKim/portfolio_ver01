@@ -1,0 +1,324 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro|Monoton);
+@import url(normalize.css);
+
+/*font*/ 
+body { 
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #222;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px
+}
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 50px; 
+  letter-spacing: 4px
+}
+/* body bg color */
+body {
+  background: #fff7eb
+}
+::selection {
+  background: #a3d35d;
+}
+/*layout*/
+header {
+  width: 100%
+}
+.header-con {
+  width: 1400px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  padding: 40px 0
+}
+header img {
+  display: block;
+  float: left
+}
+header h1 {
+  width: 600px;
+  margin: auto
+}
+header h1 a {
+  display: block;
+  float: left;
+  font-weight: 500;
+  transition: all .3s
+/*  margin-top: 30px*/
+}
+header h1 a:hover {
+  color: #fd7554
+}
+header .sns {
+  float: right
+}
+header .sns a {
+  display: block;
+  float: left;
+  font-size: 14px;
+  
+  padding-left: 20px;
+  position: relative;
+  transition: all .3s
+}
+header .sns a:hover {
+/*  transform: scaleX(1.1)  */
+}
+header .sns a:after {
+  position: absolute;
+  content: '';
+  left: 8px;
+  bottom: 5px;
+  width: 0;
+  height: 18px;
+  transition: all .4s
+}
+header .sns a:nth-child(1):after {
+  background: url(../img/line01.png) no-repeat
+}
+header .sns a:nth-child(2):after {
+  background: url(../img/line02.png) no-repeat
+}
+header .sns a:nth-child(3):after {
+  background: url(../img/line03.png) no-repeat
+}
+header .sns a:hover:after{
+  width: 100%
+}
+.vert {
+  position: fixed;
+  left: -377px;
+  height: 300px;
+  bottom: 690px;
+  width: 650px;
+  
+  padding: 40px 0 0 40px;
+  
+  transform: rotate(270deg);
+  transform-origin: right bottom;
+  
+  font-size: 90px;
+  line-height: 1.2;
+  opacity: .6
+/*  background: darkgreen*/
+}
+main {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+  top: 50px
+}
+main img,
+main b,
+main .js img {
+  position: absolute;
+  box-shadow: 4px 4px 7px rgba(17, 17, 17, 0.49)
+}
+main .js img {
+  left: 50%;
+  margin-left: -360px;
+  top: 150px;
+  
+  width: 720px;
+  border: solid 10px rgba(255, 169, 148, 0.8);
+  box-shadow: none;
+  
+  z-index: -2
+}
+main .first {
+  width: 200px;
+  left: -50px;
+  top: 0px;
+  z-index: -1;
+  transition: all .3s;
+  filter: brightness(0.9)
+}
+main .first:hover {
+  filter: brightness(0.99)
+}
+main .sec {
+  width: 150px;
+  right: -40px;
+  top: 50px;
+  transition: all .3s
+}
+main .thrd {
+  width: 190px;
+  right: -120px;
+  top: 350px;
+  z-index: -2;
+  transition: all .3s
+}
+main .sec:hover,
+main .thrd:hover {
+  filter: brightness(1.1)
+}
+main b {
+  right: -100px;
+  top: -5px;
+  display: block;
+  width: 125px;
+  height: 70px;
+  padding: 10px;
+  box-shadow: none;
+  
+  text-align: right;
+  background: #fdda68;
+  z-index: -1
+/*  opacity: .87*/
+}
+/*       NAV       */
+.nav-bar {
+  position: fixed;
+  top: 160px;
+  width: 100%;
+  height: 50px
+}
+.nav-bar .gnb {
+  width: 720px;
+  margin: auto
+}
+
+/*1depth*/
+.nav-bar .gnb > li {
+  position: relative;
+  
+  float: left;
+  width: 200px;
+  margin: 0 20px;
+  text-align: center;
+  line-height: 50px
+}
+.nav-bar .gnb > li b,
+.nav-bar .sub h2 {
+  font-size: 1.8em;
+  letter-spacing: 3px
+}
+.nav-bar .gnb > li b {
+  font-weight: 700;
+  display: block;
+/*  transition: all .5s*/
+}
+.nav-bar .sub h2:after {
+  position: absolute;
+  content: '';
+  bottom: -8px;
+  width: 0;
+  height: 18px;
+  transition: all .5s
+}
+.nav-bar .sub h2:after {
+  left: 20px;
+  background: url(../img/line03.png) no-repeat;
+}
+.nav-bar .sub .schedule:after {
+  left: 6px;
+  background: url(../img/line04.png) no-repeat
+}
+.nav-bar .sub .rates:after {
+  left: 38px;
+  background: url(../img/line01.png) no-repeat
+}
+.nav-bar .sub h2:hover {
+  cursor: pointer
+}
+.nav-bar .sub:hover h2:after{
+  width: 100%
+}
+/*2depth*/
+.nav-bar .gnb > li .sub {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box
+}
+.nav-bar .sub h2 {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  width: 100%
+}
+.nav-bar .sub ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -35px;
+  margin-top: 35px
+}
+.nav-bar .sub ul a {
+  display: block;
+  height: 33.3px;
+  line-height: 33.3px;
+  transition: all .3s
+}
+.nav-bar .sub .about a:hover {
+/*  color: #fd7554*/
+  color: #a3d35d
+}
+.nav-bar .sub .skd a:hover {
+  color: #fdda68
+}
+.nav-bar .sub .rts a:hover {
+  color: #fd7554
+}
+.nav-bar .gnb > li {
+  perspective: 500px
+}
+.nav-bar .gnb > li .sub {
+  opacity: 0;
+/*  transform: rotateY(180deg);*/
+  transition: all .3s
+}
+.nav-bar .gnb > li:hover .sub {
+  top: 30px;
+  opacity: 1;
+/*  transform: rotateY(0)*/
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 40px
+}
+footer address {
+  position: absolute;
+  left: 50%;
+  margin-left: -156.08px;
+  
+  font-style: normal;
+  color: #888
+}
+footer address a,
+footer a {
+  display: block;
+  float: right;
+  transition: all .3s
+}
+footer address a:hover {
+  color: black
+}
+footer a {
+  margin-right: 40px;
+  
+  font-style: normal;
+  color: #888
+}
+footer a:hover {
+  color: black
+}
+.bg {
+  position: relative
+}
+.bg img {
+  width: 100%;
+  position: absolute;
+  top: 350px;
+  z-index: -2
+}

@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Courier+Prime|Open+Sans);
+@import url(all.min.css);
+@import url(normalize.css);
+
+/*font*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #ddd
+}
+header .gnb {
+  font-family: 'Courier Prime' 
+}
+main h2, main h3 { text-transform: uppercase}
+::selection {
+  background: #fff507;
+  color: #111
+}
+/*layout*/
+.wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg_03.png) no-repeat center bottom / cover;
+  filter: brightness(.9)
+}
+header {
+  position: absolute;
+  width: 380px;
+  height: 100%;
+  top: 100px;
+  right: 100px;
+/*  background: gray*/
+  z-index: 2
+}
+header .logo img {
+/*  position: relative;*/
+  display: block;
+  width: 300px;
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+header .logo b {
+  display: block;
+  font-size: small;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.5
+}
+header .gnb {
+  position: absolute;
+  top: 45%;
+  margin-top: -160px;
+  right: 0px;
+  width: 380px;
+  height: 160px;
+  
+/*  background: green;*/
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  
+}
+header .gnb a {
+  display: block;
+  height: 40px;
+  color: #fff;
+  text-shadow: 3px 3px 3px #000;
+  line-height: 40px;
+  transition: all .3s
+}
+header .gnb a:hover {
+  letter-spacing: 2.5px;
+/*  color: #fff*/
+  color: #3fdbcb
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(31, 48, 64, 0.31);
+  font-size: small;
+  line-height: 40px;
+  color: #eee;
+  transition: all .3s
+/*    1f3040*/
+}
+footer img {
+  position: relative;
+  display: block;
+  float: left;
+  margin-top: 14px;
+  left: 135px
+}
+footer address {
+  position: relative;
+  float: left;
+  left: 150px;
+  
+  font-style: normal;
+}
+footer .sns {
+  z-index: 2;
+  position: relative;
+  display: block;
+  float: right;
+  width: 380px;
+  right: 100px
+}
+footer .sns a {
+  display: block;
+  float: left;
+  width: 95px;
+  text-align: center
+}
+footer .sns a:hover {
+  color: #37c1b3
+}
+
+main {
+  position: fixed;
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%
+}
+main section {
+  position: relative;
+  float: left;
+  width: 12%;
+  height: 100%;
+  overflow: hidden
+}
+main section h2 {
+  position: absolute;
+  top: 400px;
+  width: 100%;
+  z-index: 1;
+  background: rgba(14, 25, 36, 0.56);
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 5px 0;
+  transition: all .5s;
+  letter-spacing: 1.4px
+}
+main section .bg {
+  position: absolute;
+  top: 400px;
+  width: 90%;
+  margin: 0 5%;
+  height: 0;
+  
+  background: #000;
+  opacity: .5;
+  transition: all .5s
+}
+main section p {
+  position: absolute;
+  top: 450px;
+  width: 90%;
+  margin: 0 5%;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  opacity: .8;
+  color: #eee;
+  text-shadow: 1px 1px 2px #222 
+}
+main section h3,
+main section p {
+  right: -100%
+}
+main section {
+  background: url(../img/divider.png) no-repeat left center / auto 100% 
+}
+main section video {
+  position: absolute;
+  bottom: 12%;
+  left: -100%;
+  height: 80%;
+  z-index: -1;
+  opacity: 0
+}
+main section:hover h2 {
+  color: #37c1b3;
+  letter-spacing: 4px;
+}
+main section:hover p {
+  top: 450px;
+  height: 60px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

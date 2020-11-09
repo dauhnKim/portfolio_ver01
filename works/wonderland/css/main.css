@@ -1,0 +1,319 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Abril+Fatface);
+@import url(all.min.css);
+@import url(normalize.css);
+
+/*font*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #222222
+}
+h1 {
+  font-family: 'Abril Fatface', sans-serif;
+  color: #f0decb;
+  font-weight: normal;
+  font-size: 38px;
+  letter-spacing: 1px;
+}
+/*layout*/
+body {
+  background: #000
+}
+
+.hidden-text {
+  display: none
+}
+
+/*동영상배경*/
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  
+  z-index: -1 
+}
+.bg video {
+  min-width: 100%;
+  min-height: 100%
+}
+
+/*header*/
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  
+  background: rgba(206, 46, 108, 0.21);
+  transform-origin: left top;
+  transition: all 1s
+}
+header:hover {
+  width: 250px;
+}
+header:hover .gnb{
+  opacity: 0.98;
+}
+
+h1 {
+  position: fixed;
+  top: 28px;
+  left: 40px;
+}
+h1 a {
+  display: block;
+  transition: all 0.3s
+}
+h1 a:hover {
+  color: #fec771
+  
+}
+
+
+/*gnb*/
+.gnb {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  width: 300px;
+  font-size: 30px;
+  color: #f0decb;
+  opacity: 0;
+  transition: all 0.5s
+}
+
+.gnb li a{
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  font-weight: 600;
+  
+  transition: all 0.5s
+}
+.gnb li a:hover {
+  color: #fec771
+}
+.gnb li a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: #f0decb;
+  transition: all 0.3s
+}
+.gnb li a:hover:after {
+  width: 100%
+}
+
+/*sns*/
+
+.sns-con .sns {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: inherit;
+  height: 100px;
+  text-align: center
+}
+.sns-con .sns a {
+  position: relative;
+  display: block;
+
+  bottom: 85px;
+  right: 38px;
+  padding: 10px 0;
+  
+  color: #f0decb;
+
+  font-size: large;
+  transition: all 0.3s
+}
+.sns-con .sns a:hover {
+  color: #fec771
+}
+
+/*header menu*/
+header .menu-btn {
+  position: absolute;
+  display: block;
+  top: 40px;
+  right: 32px;
+}
+header .menu-btn span {
+  position: absolute;
+  width: 0px;
+  overflow: hidden
+}
+header .menu-btn:hover {
+  cursor: pointer ;
+}
+
+/*vertical-logo*/
+/*
+.vertical-logo {
+  position: absolute;
+  display: block;
+  bottom: 40px;
+  padding: 0 35px;
+  right: 0px;
+}
+*/
+
+/*아래 공통요소*/
+
+.bottom-first,
+.bottom-second {
+  position: absolute;
+  bottom: 40px;
+  
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f0decb;
+}
+.bottom-first h3,
+.bottom-second h3 {
+  margin-bottom: 10px;
+
+  text-align: center;
+  font-size: 10px;
+  font-weight: normal
+}
+.bottom-first a,
+.bottom-second a {
+  position: relative;
+  font-size: 18px;
+  transition: all 0.3s
+}
+
+/*중앙선 그리기*/
+.bottom-first a:after,
+.bottom-second a:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: #f0decb;
+  transition: all 0.3s
+}
+.bottom-first a:hover:after,
+.bottom-second a:hover:after {
+  left: 0;
+  width: 100%
+}
+
+/*첫번째 아래*/
+.bottom-first {
+  left: 40px;
+  width: 200px;
+}
+.bottom-first span {
+  position: absolute;
+  bottom: -30px;
+  left: 28px;
+  width: 145px;
+  opacity: 0;
+  
+  font-size: 18px;
+  font-weight: normal;
+  
+  cursor: default;
+  transition: all 0.5s
+}
+.bottom-first a:hover span {
+  bottom: 70px;
+  opacity: 0.9;
+  color: #f0decb
+}
+
+/*아래 두번째*/
+.bottom-second {
+  left: 400px;
+  width: 150px;
+}
+.bottom-second a span {
+  position: absolute;
+  bottom: -30px;
+  left: 25px;
+  
+  letter-spacing: 0.8px;
+  text-transform: none;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  
+  cursor: default;
+  opacity: 0;
+  transition: all 0.5s
+}
+.bottom-second a:hover span {
+  bottom: 70px;
+  opacity: 0.9;
+}
+
+/*stroke*/
+.stroke {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+}
+.stroke img {
+  position: absolute;
+  bottom: 50px;
+  left: 253px;
+  
+}
+
+
+
+/*오른쪽 아래*/
+
+/*
+header .bottom-right {
+  position: absolute;
+  bottom: 40px;
+  left: -240px;
+  padding: 0 50px;
+  
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f0decb
+}
+.bottom-right h3 {
+  margin-bottom: 10px;
+
+  text-align: center;
+  font-size: 10px;
+  font-weight: normal
+}
+.bottom-right a {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s
+}
+.bottom-right a:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: #f0decb;
+  transition: all 0.3s
+}
+.bottom-right a:hover:after {
+  left: 0;
+  width: 100%
+}
+*/
+

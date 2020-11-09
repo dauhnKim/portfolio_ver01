@@ -1,0 +1,21 @@
+@charset "utf-8"; 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Cormorant+Garamond);
+@import url(normalize.css);
+@import url(all.min.css);
+
+::-webkit-scrollbar {
+  width: 5px
+}
+::-webkit-scrollbar-track {
+  background: #282b29
+}
+::-webkit-scrollbar-thumb {
+  background: #c4dfa6
+}
+body {
+  background: #282b29;
+}
+::selection {
+  background: #000;
+  color: #fff
+}

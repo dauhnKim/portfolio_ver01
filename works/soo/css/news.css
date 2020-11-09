@@ -1,0 +1,349 @@
+@import url(common.css);
+
+/* visual */
+.visual {
+  width: 100%;
+  height: 430px;
+  background: url(../img/bg_news01.png) no-repeat center center / cover
+}
+.visual .visual-con {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  /*  background: green*/
+}
+.visual .text {
+  position: absolute;
+  width: 100%;
+  top: 140px;
+  /*  background: red;*/
+  font-size: 60px;
+  text-align: center;
+}
+.visual .text p {
+  margin-top: 30px;
+  font-weight: normal;
+  font-size: 20px
+}
+.visual form .form-style {
+  position: absolute;
+  width: 730px;
+  height: 80px;
+  line-height: 88px;
+  bottom: -43px;
+  left: 50%;
+  margin-left: -365px;
+  background: #fff;
+  box-shadow: 0 0 15px #ddd;
+  text-align: center;
+}
+.form-style select,
+.form-style .srch,
+.form-style .srch-btn {
+  border: solid 1px #bababa;
+  line-height: 30px;
+  height: 50px;
+  padding: 0 10px
+}
+.form-style .srch {
+  margin: 0 15px
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 0px;
+  top: 18px;
+  color: #fff;
+  background: #f49600;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  overflow: hidden
+}
+.btn .txt {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.btn .bg {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background: #4a4a4a;
+  transition: all 0.3s
+}
+.btn:hover .bg {
+  top: 0
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+main .container {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  margin-top: 130px
+}
+article {
+  height: 310px;
+  margin-top: 30px;
+  border-bottom: solid 1px #bababa
+}
+article:nth-child(5) {
+  border: none;
+  margin-bottom: 50px
+}
+article > a {
+  display: block;
+  float: right;
+  overflow: hidden
+}
+article > a img {
+  transition: all .3s ease-in
+}
+article:hover > a img {
+  transform: scale(1.05)
+}
+article .sort {
+  color: #f49600;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+}
+article .title {
+  width: 60%;
+  display: block;
+  float: left
+}
+article .title a {
+  display: block;
+  float: left;
+  transition: all .3s
+}
+article .title a:hover {
+  color: #f49600
+}
+article h2 {
+  margin: 10px 0;
+  font-size: 32px;
+}
+article .date {
+  display: block;
+  float: left;
+  font-size: 13px;
+  margin: 15px 0;
+  text-transform: uppercase
+}
+article .date:before {
+  display: block;
+  float: left;
+  content: '';
+  left: 0;
+  bottom: .5em;
+  height: 1px;
+  margin-top: 8px;
+  margin-right: 20px;
+  width: 60px;
+  background-color: #bababa
+}
+article .date span {
+  display: none;
+}
+article .desc {
+  line-height: 1.8
+}
+article .summary {
+  width: 60%;
+  letter-spacing: 1.1px;
+  line-height: 1.6
+}
+.container .pagination {
+  position: relative;
+  width: 372px;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 100px
+}
+.pagination li {
+  display: block;
+  float: left;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  line-height: 50px;
+  text-align: center;
+  transition: all .3s
+}
+.pagination li:hover {
+  background: #ccc;
+  cursor: pointer
+}
+.pagination li:first-child {
+  border: solid 1px #cccccc
+}
+.pagination .btn {
+  top: 0
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .visual .visual-con {
+    width: 100%;
+  }
+  .visual form .form-style {
+    width: 550px;
+    height: 50px;
+    line-height: 0px;
+    bottom: -35px;
+    left: 50%;
+    margin-left: -290px;
+  }
+  .form-style select,
+  .form-style .srch {
+    position: relative;
+    top: -7px;
+    height: 40px;
+    padding: 0;
+  }
+  .form-style .srch {
+    width: 240px;
+    margin: 0 5px
+  }
+  .btn {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 0px;
+    top: 7px
+  }
+  main .container {
+    width: 95%
+  }
+  article {
+    height: auto
+  }
+  article > a {
+    width: 50%;
+    height: auto
+  }
+  article > a img {
+   width: 100%;
+    margin-bottom: 25px
+  }
+  article:hover > a img {
+  transform: scale(1);
+  filter: brightness(1.1)
+  }
+  article .sort {
+  float: left
+  }
+  article .title {
+  width: 50%
+  }
+  article .date span {
+  display: none;
+  }
+  article .desc {
+    line-height: 1.8
+  }
+  article .summary {
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .pagination li {
+    height: 40px;
+    line-height: 40px
+  }
+}
+@media screen and (max-width:639px) {
+  .visual {
+    width: 100%
+  }
+  .visual .visual-con {
+    width: 100%;
+  }
+  .visual form .form-style {
+  width: 100%;
+  height: 140px;
+  line-height: 0px;
+  bottom: -100px;
+  left: 0;
+  margin-left: 0px;
+  box-shadow: none;
+  padding: 0;
+  }
+  .form-style select,
+  .form-style .srch {
+    position: relative;
+    top: 15px;
+    line-height: 30px;
+    height: 40px;
+    padding: 0px;
+    width: 45%;
+    margin: 1%
+  }
+  .form-style .srch {
+    margin: 1%
+  }
+  .btn {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 0px;
+    top: 7px
+  }
+  .visual-con form .btn {
+    width: 93%;
+    top: 30px
+  }
+  main .container {
+    width: 95%
+  }
+  article {
+    height: auto
+  }
+  article > a {
+    width: 100%;
+    height: auto
+  }
+  article > a img {
+    width: 100%;
+    margin-bottom: 25px
+  }
+  article:hover > a img {
+  transform: scale(1);
+  filter: brightness(1.1)
+  }
+  article .sort {
+  float: left
+  }
+  article .title {
+  width: 100%
+  }
+  article .date span {
+/*  display: none;*/
+  }
+  article .desc {
+    width: 100%;
+    line-height: 1.8
+  }
+  article .summary {
+    width: 100%;
+    float: left;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .pagination li {
+    height: 40px;
+    line-height: 40px
+  }
+}

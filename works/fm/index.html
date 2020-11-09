@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyrille Taczynksi</title>
+<!--[if lt IE 9]>  
+  <script src="js/ie9.min.js"></script>
+  <script src="js/respond.min.js"></script>  
+<![endif]-->
+  <link rel="shortcut icon" href="logo.ico">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/base.js"></script>  
+  <script src="js/vid.js"></script>
+</head>  
+    
+<body>
+  <header> 
+    <div class="header-con">
+      <nav class="lang">
+        <a href="#" class="on"><i class="far fa-circle"></i>EN</a>
+        <a href="#"><i class="far fa-circle"></i>FR</a>
+      </nav>
+      <nav class="gnb">
+        <a href="#"><i class="far fa-circle"></i>WORK</a>
+        <a href="gear.html"><i class="far fa-circle"></i>GEAR</a>
+        <a href="#"><i class="far fa-circle"></i>ABOUT</a>
+        <a href="#"><i class="far fa-circle"></i>CONTACT</a>
+      </nav>
+      <span class="logo"><a href="index.html">i am a filmmaker</a></span>
+    </div>
+  </header>
+
+  <div class="visual">
+    <div class="visual-con">
+      <p class="v-text">in less time</p>
+      <figure class="v-vid">
+          <video id="myVideo" muted loop>
+            <source src="img/vid1.mp4" type="video/mp4">
+          </video>       
+          <button class="p-btn">        
+            <p onclick="playVid()" class="play">play reel</p>
+            <p onclick="pauseVid()" class="pause">pause</p>         
+          </button>
+      </figure>
+
+      <div class="bg-text">
+        <p>
+          convey more info <span>in less time</span>
+        </p>
+        <p>
+          and more than just info
+        </p>
+      </div>
+    </div>
+  </div>  
+  <script>
+    var vid = document.getElementById("myVideo");
+    function playVid() {
+      vid.play();
+    }
+    function pauseVid() {
+      vid.pause();
+    }
+  </script>
+
+  <main class="clearfix">
+    <!--1-->
+    <section class="about">
+      <img src="img/pic01.png" alt="">
+      <article class="desc open">
+        i am a creative filmmaker born <br>
+        and bred in france. my approach <br>
+        infuses strategic insight into <br>
+        storytelling for brands and <br>
+        anyone seeking to stand out.
+        <a href="#">LEARN MORE</a>
+      </article>
+    </section>
+
+    <!--2-->
+    <div class="pj">
+      <div class="bg-text">projects that<br> make me blush
+        <ul class="pj-vid">
+          <li class="vid1">
+            <a href="#"><video preload muted loop class="v1" onmouseover="this.play()" onmouseout="this.pause()">
+                <source src="img/vid1.mp4" type="video/mp4">
+              </video>
+              <h3>haven book</h3></a>
+          </li>
+
+          <li class="vid2">
+            <a href="#"><video preload muted loop class="v2">
+                <source src="img/vid2.mp4" type="video/mp4">
+              </video> 
+              <h3>la viet coffee</h3></a>
+          </li>
+
+          <li class="vid3">
+            <a href="#"><video preload muted loop class="v3">
+                <source src="img/vid3.mp4" type="video/mp4">
+              </video>
+              <h3>le champagne texier</h3></a>
+          </li>
+
+          <li class="vid4">
+            <a href="#"><video preload muted loop class="v4">
+                <source src="img/vid4.mp4" type="video/mp4">
+              </video>
+              <h3>CHAMPAGNE JEAN</h3></a>
+          </li>
+
+          <li class="vid5">
+            <a href="#"><video preload muted loop class="v5" src="img/vid5.mp4" type="video/mp4"></video>
+              <h3>LE CHATEAU DE FLIXECOURT</h3></a>         
+          </li>
+        </ul>
+
+      
+      <a href="#" class="sm">see more</a>
+    </div>
+    </div>
+
+    <!--3-->
+    <div class="cl-bg clearfix">
+      <section class="cl">
+        <h3>clients</h3>
+        <div class="cls">
+          <img src="img/cl01.png" alt="">
+          <img src="img/cl02.png" alt=""> 
+          <img src="img/cl03.png" alt="">
+          <img src="img/cl04.png" alt="">
+        </div>
+
+        <p>it's the relationships i've build that keep me dreaming</p>
+
+        <div class="info">
+          <div class="mail">
+            info @ <br>
+            cyrilletaczynski.com <br>
+            +33 (0) 6 87 64 06 73
+          </div> 
+          <div class="loca">
+            based in france <br>
+            but get along <br>
+            everywhere
+          </div>
+          <div class="sns">
+            <a href="https://www.youtube.com/channel/UCCX0xLtRnEgtNfrR0LGa35w" target="_blank"><i class="far fa-circle"></i>youtube</a>
+            
+            <a href="https://www.facebook.com/cyrillevideo" target="_blank"><i class="far fa-circle"></i>facebook</a>
+            
+            <a href="https://www.instagram.com/cyrilletaczynski/" target="_blank"><i class="far fa-circle"></i>instagram</a>
+          </div> 
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="clearfix">
+    <div class="wlc">
+      <marquee loop="500">
+        bienvenue &emsp; wlecome &emsp; 안녕하세요 &emsp; bienvenue &emsp; wlecome &emsp; 안녕하세요 &emsp; bienvenue &emsp; wlecome &emsp; 안녕하세요
+      </marquee>
+    </div>
+    
+    <span></span>
+    
+    <address>
+      copyright &copy; cyrille taczynski
+    </address>
+    
+    <a href="#" class="du">
+      website by dauhn
+    </a>
+  </footer>
+
+  <div class="img-logo">
+    <a href="index.html" class="fst-logo"><img src="img/logo01.png" alt=""></a>
+    <a href="index.html" class="sec-logo"><img src="img/logo02.png" alt=""></a>
+  </div>
+  
+</body>
+</html>
